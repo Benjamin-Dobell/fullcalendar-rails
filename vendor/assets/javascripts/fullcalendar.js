@@ -4110,6 +4110,10 @@ Grid.mixin({
 			}
 		}
 
+		if (this.view.opt('constrainResizeRange')) {
+			range = this.view.trigger('constrainResizeRange', null, range);
+		}
+
 		return range;
 	},
 
